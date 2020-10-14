@@ -1,22 +1,29 @@
 .container {
+    display: flex;
+}
+
+.img-container {
     position: relative;
+    display: inline-block;
+    width: 150px;
+    margin: auto;
 }
 
 img {
     position: absolute;
-    width: 300px;
+    width: 75px;
 }
 
 .top {
-    width: 600px;
+    width: 150px;
 }
 
 .left, .right {
-    top: 175px;
+    top: 43px;
 }
 
 .right {
-    left: 300px;
+    left: 74px;
 }
 
 
