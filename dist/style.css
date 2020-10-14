@@ -1,0 +1,23 @@
+.container {
+    position: relative;
+}
+
+img {
+    position: absolute;
+    width: 300px;
+}
+
+.top {
+    width: 600px;
+}
+
+.left, .right {
+    top: 175px;
+}
+
+.right {
+    left: 300px;
+}
+
+
+
