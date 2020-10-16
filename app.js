@@ -7,15 +7,30 @@ var entertainment = document.getElementsByClassName('entertainment')[0];
 var architecture = document.getElementsByClassName('architecture')[0];
 
 H.addEventListener('mouseover', function() {
-    box.classList.remove('rotate-e', 'rotate-a');
-    box.classList.add('rotate-h');
-    hetzel.classList.add('show');
+    addClassToBox('rotate-h')
+    handleShowClass(hetzel);
 });
 E.addEventListener('mouseover', function() {
-    box.classList.remove('rotate-h', 'rotate-a');
-    box.classList.add('rotate-e');
+    addClassToBox('rotate-e');
+    handleShowClass(entertainment);
 });
 A.addEventListener('mouseover', function() {
-    box.classList.remove('rotate-e', 'rotate-h');
-    box.classList.add('rotate-a');
+    addClassToBox('rotate-a');
+    handleShowClass(architecture);
 });
+
+function addClassToBox(classNotToRemove) {
+    box.classList.remove('rotate-e', 'rotate-a', 'rotate-h');
+    box.classList.add(classNotToRemove)
+}
+
+function handleShowClass(textToShow) {
+    var texts = [hetzel, entertainment, architecture];
+    texts.forEach(function(text) {
+        if (text === textToShow) {
+            text.classList.add('show');
+        } else {
+            text.classList.remove('show');
+        }
+    })
+}
