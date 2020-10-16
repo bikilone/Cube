@@ -7,12 +7,13 @@
   body {
     margin: 0;
     padding: 0;
-    display: grid;
-    justify-content: center ;
-    align-items: center ;
     height: 100vh;
     background: white;
   } 
+  .container {
+    margin-top: 100px;
+    margin-left: 100px;
+  }
 
   .box, .box div {
     height: 250px;
@@ -20,7 +21,7 @@
   }
   
   .box {
-    position: relative;
+    position: absolute;
     display: flex;
     justify-content: center ;
     align-items: center ;
@@ -82,9 +83,9 @@
       height: 250px;
       background-repeat: no-repeat;
       background-size: cover;
-      top: 51%;
+      /* top: 51%;
       left: 39%;
-      transform: translateY(-50%);
+      transform: translateY(-50%); */
       opacity: 0;
       z-index: -1;
       transition: opacity 2s 2s;
