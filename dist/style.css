@@ -1,8 +1,9 @@
 *{
     margin: 0;
     padding: 0;
-      box-sizing: box-border;
-  } 
+    box-sizing: box-border;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -11,12 +12,14 @@
     align-items: center ;
     height: 100vh;
     background: white;
-  
   } 
+
+  .box, .box div {
+    height: 250px;
+    width: 250px;
+  }
   
   .box {
-    height: 30vh ;
-    width: 30vh;
     position: relative;
     display: flex;
     justify-content: center ;
@@ -31,8 +34,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
-    height: 30vh;
-    width: 30vh;
     background-color: grey;
   }
   
@@ -78,7 +79,7 @@
   /* text images */
   .architecture, .entertainment, .hetzel {
       position: absolute;
-      height: 30vh;
+      height: 250px;
       background-repeat: no-repeat;
       background-size: cover;
       top: 51%;
