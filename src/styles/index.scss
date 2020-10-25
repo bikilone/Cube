@@ -8,7 +8,6 @@
 
 .container {
   margin-top: 100px;
-  margin-left: 100px;
 }
 
 .box, .box div {
@@ -18,13 +17,11 @@
 
 .box {
   position: absolute;
-  display: flex;
-  justify-content: center ;
-  align-items: center ;
   background: none;
   transform-style: preserve-3d;
   font-size: 30px;
-  transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+  left: 50%;
+  transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
 }
 
 .box div {
@@ -37,13 +34,13 @@
 
 
 .rotate-a {
-  animation: rotate-a $animation-speed forwards, reverse-rotate-a $animation-speed 5s forwards;
+  animation: rotate-a $animation-speed;
 }
 .rotate-h {
-  animation: rotate-h $animation-speed forwards, reverse-rotate-h $animation-speed 5s forwards;
+  animation: rotate-h $animation-speed;
 }
 .rotate-e {
-  animation: rotate-e $animation-speed forwards, reverse-rotate-e $animation-speed 5s forwards;
+  animation: rotate-e $animation-speed;
 }
 
 /* text images */
@@ -56,6 +53,9 @@ a {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0;
+}
+.architecture img {
+  opacity: 1;
 }
 
 .show {

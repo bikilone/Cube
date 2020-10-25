@@ -26,69 +26,23 @@
         opacity: 0;
     }
   }
-  
-  
-  @keyframes rotate-a {
-    from {
-                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
-    }
-    to {
-                transform: rotateY(90deg) rotateX(-0) rotateZ(-0); 
-    }
-  }
-  
-  @keyframes rotate-h {
-      from {
-                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+  @mixin animation($name, $toX, $toY, $toZ) {
+    @keyframes #{$name} {
+      0% {
+        transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
       }
-      to {
-                transform: rotateY(0) rotateX(0) rotateZ(0); 
+      10% {
+        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
       }
-  }
-  
-  @keyframes rotate-e {
-      from {
-                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+      90% {
+        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
       }
-      to {
-                transform: rotateY(45deg) rotateX(-90deg) rotateZ(-45deg);
+      100% {
+        transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
       }
-  }
-  
-  @keyframes reverse-rotate-a {
-    from {
-                transform: rotateY(90deg) rotateX(-0) rotateZ(-0); 
-    }
-    to {
-              transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
     }
   }
-  
-  @keyframes reverse-rotate-h {
-      from {
-                transform: rotateY(0) rotateX(0) rotateZ(0); 
-      }
-      to {
-                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
-      }
-  }
-  
-  @keyframes reverse-rotate-e {
-      from {
-                transform: rotateY(45deg) rotateX(-90deg) rotateZ(-45deg);
-      }
-      to {
-                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
-      }
-  }
-  
-  // @mixin animation($name, $rotateY, $rotateX, $rotateZ) {
-  //   @keyframes #{$name} {
-  //     from {
-  //               transform: rotateY(#{$rotateY}) rotateX(#{$rotateX}) rotateZ(#{$rotateZ});
-  //     }
-  //     to {
-  //               transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
-  //     }
-  // }
-  // }
+
+ @include animation('rotate-a', 0, 90deg, 0);
+ @include animation('rotate-h', 0, 0, 0);
+ @include animation('rotate-e', -90deg, 45deg, -45deg);
