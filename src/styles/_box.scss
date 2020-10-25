@@ -1,0 +1,29 @@
+.box, .box div {
+    height: $height;
+    width: $height;
+  }
+  
+  .box {
+    position: absolute;
+    background: none;
+    transform-style: preserve-3d;
+    font-size: 30px;
+    transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
+  }
+  
+  .box div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-color: grey;
+  }
+  
+  .rotate-a {
+    animation: rotate-a $animation-speed;
+  }
+  .rotate-h {
+    animation: rotate-h $animation-speed;
+  }
+  .rotate-e {
+    animation: rotate-e $animation-speed;
+  }

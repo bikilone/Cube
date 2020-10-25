@@ -5,68 +5,12 @@
 @import "./global";
 @import "./cube-sides";
 @import "./animation";
+@import "./links";
+@import "./box";
 
 .container {
   margin-top: 100px;
   margin-left: calc((100vw - #{$height}) / 2);
 }
 
-.box, .box div {
-  height: $height;
-  width: $height;
-}
-
-.box {
-  position: absolute;
-  background: none;
-  transform-style: preserve-3d;
-  font-size: 30px;
-  transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
-}
-
-.box div {
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  background-color: grey;
-}
-
-
-
-.rotate-a {
-  animation: rotate-a $animation-speed;
-}
-.rotate-h {
-  animation: rotate-h $animation-speed;
-}
-.rotate-e {
-  animation: rotate-e $animation-speed;
-}
-
-/* text images */
-a {
-  display: none;
-}
-.architecture img, .entertainment img, .hetzel img {
-    position: absolute;
-    height: $height;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0;
-}
-.architecture img {
-  opacity: 1;
-}
-
-.show {
-  display: inline-block
-}
-
-.hide {
-  display: none;
-}
-
-.show img {
-  animation: show $animation-speed $animation-speed forwards, hide $animation-speed 4s forwards;
-}
 

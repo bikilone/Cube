@@ -1,10 +1,34 @@
 
-@keyframes show {
-    from {
+@keyframes opacity-up {
+    0% {
       opacity: 0;
     }
-    to {
+    10% {
+      pointer-events: all;
+    }
+    50% {
       opacity: 1;
+    }
+    90% {
+      pointer-events: none;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes show {
+    0% {
+      display: none;
+    }
+    1% {
+      display: block;
+    }
+    99% {
+      display: block;
+    }
+    100% {
+      display: none;
     }
   }
   
@@ -17,24 +41,16 @@
     }
   }
   
-  
-  @keyframes a {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0;
-    }
-  }
   @mixin animation($name, $toX, $toY, $toZ) {
     @keyframes #{$name} {
       0% {
         transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg) translateX(-50%);
       }
-      10% {
-        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
+      10% { // .5s
+        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
       }
-      90% {
+      // 4s
+      90% { // .5s
         transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
       }
       100% {

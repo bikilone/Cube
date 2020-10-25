@@ -10,15 +10,15 @@ var architecture = document.getElementsByClassName('architecture')[0];
 
 H.addEventListener('mouseover', function() {
     addClassToBox('rotate-h')
-    // handleShowClass(hetzel);
+    handleShowClass(hetzel);
 });
 E.addEventListener('mouseover', function() {
     addClassToBox('rotate-e');
-    // handleShowClass(entertainment);
+    handleShowClass(entertainment);
 });
 A.addEventListener('mouseover', function() {
     addClassToBox('rotate-a');
-    // handleShowClass(architecture);
+    handleShowClass(architecture);
 });
 
 function addClassToBox(classNotToRemove) {
@@ -30,9 +30,9 @@ function handleShowClass(textToShow) {
     var texts = [hetzel, entertainment, architecture];
     texts.forEach(function(text) {
         if (text === textToShow) {
-            // text.classList.add('show');
+            text.classList.add('show');
         } else {
-            // text.classList.remove('show');
+            text.classList.remove('show');
         }
     })
 }
