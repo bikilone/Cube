@@ -8,6 +8,7 @@
 
 .container {
   margin-top: 100px;
+  margin-left: calc((100vw - #{$height}) / 2);
 }
 
 .box, .box div {
@@ -20,7 +21,6 @@
   background: none;
   transform-style: preserve-3d;
   font-size: 30px;
-  left: 50%;
   transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
 }
 
