@@ -1,0 +1,22 @@
+.perspectives {
+    // height: $height;
+    // width: $height;
+    position: absolute;
+    .perspective {
+        height: 135px;
+        position: absolute;
+        &-a {
+        // right: 10px;
+            height: 200px;
+            left: -40px;
+        }
+        &-h {
+            height: 200px;
+            left: 76px;
+        }
+        &-e {
+            top: -68px;
+            left: -40px;
+        }
+    }
+}

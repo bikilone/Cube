@@ -5,12 +5,11 @@
 @import "./global";
 @import "./cube-sides";
 @import "./animation";
-@import "./links";
 @import "./box";
+@import "./perspective";
 
-.container {
-  margin-top: 100px;
-  margin-left: calc((100vw - #{$height}) / 2);
+.red {
+  border: 1px solid red;
 }
 
 

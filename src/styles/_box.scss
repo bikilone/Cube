@@ -1,3 +1,9 @@
+
+.container {
+    margin-top: 100px;
+    margin-left: calc((100vw - #{$height}) / 2);
+  }
+
 .box, .box div {
     height: $height;
     width: $height;
@@ -26,4 +32,29 @@
   }
   .rotate-e {
     animation: rotate-e $animation-speed;
+  }
+
+  .links {
+    display: none;
+  }
+.architecture, .entertainment, .hetzel {
+    height: $height;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    img {
+        position: absolute;
+        height: $height;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+// .hide {
+//   display: none;
+// }
+
+.show {
+    animation: opacity-up $animation-speed *.8 $animation-delay;
   }

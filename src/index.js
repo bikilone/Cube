@@ -9,7 +9,7 @@ var entertainment = document.getElementsByClassName('entertainment')[0];
 var architecture = document.getElementsByClassName('architecture')[0];
 
 H.addEventListener('mouseover', function() {
-    addClassToBox('rotate-h')
+    addClassToBox('rotate-h');
     handleShowClass(hetzel);
 });
 E.addEventListener('mouseover', function() {
@@ -23,7 +23,10 @@ A.addEventListener('mouseover', function() {
 
 function addClassToBox(classNotToRemove) {
     box.classList.remove('rotate-e', 'rotate-a', 'rotate-h');
-    box.classList.add(classNotToRemove)
+    box.classList.add(classNotToRemove);
+    setTimeout(() => {
+        box.classList.remove(classNotToRemove);
+    }, 5500);
 }
 
 function handleShowClass(textToShow) {
