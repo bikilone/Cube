@@ -1,0 +1,28 @@
+.front{
+    transform: translateZ($height / 2);
+    background-image: url('../assets/front-pozicija/H.png')
+  }
+  .back{
+    transform: translateZ(-$height / 2);
+    background-color: rgba(72,99,160,0.80) ;
+  } 
+  .left{
+    transform: translateX(-$height / 2) rotateY(90deg);
+    background-image: url('../assets/front-pozicija/A.png');
+  }
+  
+  .right{
+    transform: translateX($height / 2) rotateY(90deg);
+    background: rgba(242,192,99,0.80) ;
+  }
+  
+  .top{
+    transform: translateY($height / 2) rotateX(90deg);
+    background: rgba(63,140,123,0.80) ;
+   
+  }
+  
+  .bottom{
+    transform: translateY(-$height / 2) rotateX(90deg);
+    background-image: url('../assets/front-pozicija/E.png');
+  }

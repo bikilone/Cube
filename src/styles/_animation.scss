@@ -1,0 +1,94 @@
+
+@keyframes show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes hide {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes a {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+  }
+  
+  
+  @keyframes rotate-a {
+    from {
+                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+    }
+    to {
+                transform: rotateY(90deg) rotateX(-0) rotateZ(-0); 
+    }
+  }
+  
+  @keyframes rotate-h {
+      from {
+                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+      }
+      to {
+                transform: rotateY(0) rotateX(0) rotateZ(0); 
+      }
+  }
+  
+  @keyframes rotate-e {
+      from {
+                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+      }
+      to {
+                transform: rotateY(45deg) rotateX(-90deg) rotateZ(-45deg);
+      }
+  }
+  
+  @keyframes reverse-rotate-a {
+    from {
+                transform: rotateY(90deg) rotateX(-0) rotateZ(-0); 
+    }
+    to {
+              transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+    }
+  }
+  
+  @keyframes reverse-rotate-h {
+      from {
+                transform: rotateY(0) rotateX(0) rotateZ(0); 
+      }
+      to {
+                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+      }
+  }
+  
+  @keyframes reverse-rotate-e {
+      from {
+                transform: rotateY(45deg) rotateX(-90deg) rotateZ(-45deg);
+      }
+      to {
+                transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+      }
+  }
+  
+  // @mixin animation($name, $rotateY, $rotateX, $rotateZ) {
+  //   @keyframes #{$name} {
+  //     from {
+  //               transform: rotateY(#{$rotateY}) rotateX(#{$rotateX}) rotateZ(#{$rotateZ});
+  //     }
+  //     to {
+  //               transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+  //     }
+  // }
+  // }

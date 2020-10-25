@@ -1,0 +1,72 @@
+// @import "../../node_modules/normalize-scss/sass/normalize";
+@import "./variables";
+@import "./nav";
+@import "./footer";
+@import "./global";
+@import "./cube-sides";
+@import "./animation";
+
+.container {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.box, .box div {
+  height: $height;
+  width: $height;
+}
+
+.box {
+  position: absolute;
+  display: flex;
+  justify-content: center ;
+  align-items: center ;
+  background: none;
+  transform-style: preserve-3d;
+  font-size: 30px;
+  transform: rotateY(45deg) rotateX(-15deg) rotateZ(-15deg);
+}
+
+.box div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-color: grey;
+}
+
+
+
+.rotate-a {
+  animation: rotate-a $animation-speed forwards, reverse-rotate-a $animation-speed 5s forwards;
+}
+.rotate-h {
+  animation: rotate-h $animation-speed forwards, reverse-rotate-h $animation-speed 5s forwards;
+}
+.rotate-e {
+  animation: rotate-e $animation-speed forwards, reverse-rotate-e $animation-speed 5s forwards;
+}
+
+/* text images */
+a {
+  display: none;
+}
+.architecture img, .entertainment img, .hetzel img {
+    position: absolute;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+}
+
+.show {
+  display: inline-block
+}
+
+.hide {
+  display: none;
+}
+
+.show img {
+  animation: show $animation-speed $animation-speed forwards, hide $animation-speed 4s forwards;
+}
+
