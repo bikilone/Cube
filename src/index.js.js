@@ -1,3 +1,5 @@
+import "./styles/style.scss";
+
 var H = document.getElementsByClassName('front')[0];
 var E = document.getElementsByClassName('bottom')[0];
 var A = document.getElementsByClassName('left')[0];
