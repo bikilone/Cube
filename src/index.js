@@ -56,7 +56,7 @@ function handleShowClass(textToShow) {
             text.classList.add('show');
             setTimeout(() => {
                 text.classList.remove('show');
-            }, 4500);
+            }, 4000);
         } else {
             text.classList.remove('show');
         }
