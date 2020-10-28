@@ -25,23 +25,29 @@
   }
   
   .rotate-a {
-    animation: rotate-a $animation-speed;
-    .left {
-      background-image: url('../assets/front-pozicija/A.png');
+    @include tablet {
+      animation: rotate-a $animation-speed;
+      .left {
+        background-image: url('../assets/front-pozicija/A.png');
+      }
     }
    
   }
   .rotate-h {
+    @include tablet {
     animation: rotate-h $animation-speed;
     .front {
       background-image: url('../assets/front-pozicija/H.png');
     }
   }
+  }
   .rotate-e {
+    @include tablet {
     animation: rotate-e $animation-speed;
     .bottom {
       background-image: url('../assets/front-pozicija/E.png');
     }
+  }
   }
 
   .links {
@@ -64,5 +70,7 @@
 }
 
 .show {
+  @include tablet {
     animation: opacity-up $animation-speed *.8 $animation-delay;
+  }
   }
