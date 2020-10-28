@@ -14,7 +14,7 @@
     background: none;
     transform-style: preserve-3d;
     font-size: 30px;
-    transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
+    transform: $starting-rotation;
   }
   
   .box div {
@@ -26,20 +26,33 @@
   
   .rotate-a {
     animation: rotate-a $animation-speed;
+    .left {
+      background-image: url('../assets/front-pozicija/A.png');
+    }
+   
   }
   .rotate-h {
     animation: rotate-h $animation-speed;
+    .front {
+      background-image: url('../assets/front-pozicija/H.png');
+    }
   }
   .rotate-e {
     animation: rotate-e $animation-speed;
+    .bottom {
+      background-image: url('../assets/front-pozicija/E.png');
+    }
   }
 
   .links {
     display: none;
   }
 .architecture, .entertainment, .hetzel {
+    display: inline-block;
     height: $height;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 0;
     pointer-events: none;
     img {
@@ -49,11 +62,6 @@
         background-size: cover;
     }
 }
-
-
-// .hide {
-//   display: none;
-// }
 
 .show {
     animation: opacity-up $animation-speed *.8 $animation-delay;

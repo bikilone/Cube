@@ -41,24 +41,32 @@
     }
   }
   
-  @mixin animation($name, $toX, $toY, $toZ) {
+  @mixin animation($name, $toX, $toY, $toZ, $transitonValue) {
     @keyframes #{$name} {
       0% {
-        transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg) translateX(-50%);
+        transform: $starting-rotation;
       }
       10% { // .5s
         transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
+        .front {
+          display: none;
+        }
       }
-      // 4s
-      90% { // .5s
+      20% {
+        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}) #{$transitonValue};
+      }
+      80% {
+        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ})#{$transitonValue}; 
+      }
+      90% { 
         transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
       }
       100% {
-        transform: rotateX(-15deg) rotateY(45deg) rotateZ(-15deg);
+        transform: $starting-rotation;
       }
     }
   }
 
- @include animation('rotate-a', 0, 90deg, 0);
- @include animation('rotate-h', 0, 0, 0);
- @include animation('rotate-e', -90deg, 0, 0);
+ @include animation('rotate-a', 0, 90deg, 0, translateZ(($architectureWidth - $height) / -2) );
+ @include animation('rotate-h', 0, 0, 0, translateX(($hetzelWidth - $height) / -2));
+ @include animation('rotate-e', -90deg, 0, 0, translateX(($entertainmentWidth - $height) / -2));

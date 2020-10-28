@@ -1,6 +1,6 @@
 .front{
     transform: translateZ($height / 2);
-    background-image: url('../assets/front-pozicija/H.png')
+    background-image: url('../assets//perspektiva\ H\ ispravljena.png')
   }
   .back{
     transform: translateZ(-$height / 2);
@@ -8,7 +8,7 @@
   } 
   .left{
     transform: translateX(-$height / 2) rotateY(90deg);
-    background-image: url('../assets/front-pozicija/A.png');
+    background-image: url('../assets/prespekitva\ A\ ispralvjena.png');
   }
   
   .right{
@@ -24,5 +24,5 @@
   
   .bottom{
     transform: translateY(-$height / 2) rotateX(90deg);
-    background-image: url('../assets/front-pozicija/E.png');
+    background-image: url('../assets/perspektiva\ E\ ispravljena.png');
   }

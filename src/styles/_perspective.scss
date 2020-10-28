@@ -1,7 +1,12 @@
 .perspectives {
-    // height: $height;
-    // width: $height;
+    display: none;
+    transform: scale(0.7);
+    top: 200px;
+    right: 630px;
+    // z-index: -1;
     position: absolute;
+    left: 49%;
+    opacity: .5;
     .perspective {
         height: 135px;
         position: absolute;
