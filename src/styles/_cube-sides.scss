@@ -1,28 +1,28 @@
 .front{
-    transform: translateZ($height / 2);
-    background-image: url('../assets//perspektiva\ H\ ispravljena.png')
-  }
-  .back{
-    transform: translateZ(-$height / 2);
-    background-color: rgba(72,99,160,0.80) ;
-  } 
-  .left{
-    transform: translateX(-$height / 2) rotateY(90deg);
-    background-image: url('../assets/prespekitva\ A\ ispralvjena.png');
-  }
+	transform: translateZ($height / 2);
+	background-image: url('../assets//perspektiva\ H\ ispravljena.png')
+}
+.back{
+	transform: translateZ(-$height / 2);
+	background-color: rgba(72,99,160,.80);
+} 
+.left{
+	transform: translateX(-$height / 2) rotateY(90deg);
+	background-image: url('../assets/prespekitva\ A\ ispralvjena.png');
+}
   
-  .right{
-    transform: translateX($height / 2) rotateY(90deg);
-    background: rgba(242,192,99,0.80) ;
-  }
+.right{
+	transform: translateX($height / 2) rotateY(90deg);
+	background: rgba(242,192,99,.80);
+}
   
-  .top{
-    transform: translateY($height / 2) rotateX(90deg);
-    background: rgba(63,140,123,0.80) ;
+.top{
+	transform: translateY($height / 2) rotateX(90deg);
+	background: rgba(63,140,123,.80);
    
-  }
+}
   
-  .bottom{
-    transform: translateY(-$height / 2) rotateX(90deg) rotateZ(90deg);
-    background-image: url('../assets/perspektiva\ E\ ispravljena.png');
-  }
+.bottom{
+	transform: translateY(-$height / 2) rotateX(90deg) rotateZ(90deg);
+	background-image: url('../assets/perspektiva\ E\ ispravljena.png');
+}

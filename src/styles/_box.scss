@@ -1,76 +1,76 @@
 
 .container {
-    margin-top: 100px;
-    margin-left: calc((100vw - #{$height}) / 2);
-  }
+	margin-top: 100px;
+	margin-left: calc((100vw - #{$height}) / 2);
+}
 
 .box, .box div {
-    height: $height;
-    width: $height;
-  }
+	height: $height;
+	width: $height;
+}
   
-  .box {
-    position: absolute;
-    background: none;
-    transform-style: preserve-3d;
-    font-size: 30px;
-    transform: $starting-rotation;
-  }
+.box {
+	position: absolute;
+	background: none;
+	transform-style: preserve-3d;
+	font-size: 30px;
+	transform: $starting-rotation;
+}
   
-  .box div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    background-color: grey;
-  }
+.box div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	background-color: grey;
+}
   
-  .rotate-a {
-    @include tablet {
-      animation: rotate-a $animation-speed;
-      .left {
-        background-image: url('../assets/front-pozicija/A.png');
-      }
-    }
+.rotate-a {
+	@include tablet {
+		animation: rotate-a $animation-speed;
+		.left {
+			background-image: url('../assets/front-pozicija/A.png');
+		}
+	}
    
-  }
-  .rotate-h {
-    @include tablet {
-    animation: rotate-h $animation-speed;
-    .front {
-      background-image: url('../assets/front-pozicija/H.png');
-    }
-  }
-  }
-  .rotate-e {
-    @include tablet {
-    animation: rotate-e $animation-speed;
-    .bottom {
-      background-image: url('../assets/front-pozicija/E.png');
-    }
-  }
-  }
+}
+.rotate-h {
+	@include tablet {
+		animation: rotate-h $animation-speed;
+		.front {
+			background-image: url('../assets/front-pozicija/H.png');
+		}
+	}
+}
+.rotate-e {
+	@include tablet {
+		animation: rotate-e $animation-speed;
+		.bottom {
+			background-image: url('../assets/front-pozicija/E.png');
+		}
+	}
+}
 
-  .links {
-    display: none;
-  }
+.links {
+	display: none;
+}
 .architecture, .entertainment, .hetzel {
-    display: inline-block;
-    height: $height;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    pointer-events: none;
-    img {
-        position: absolute;
-        height: $height;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+	display: inline-block;
+	height: $height;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	pointer-events: none;
+	img {
+		position: absolute;
+		height: $height;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
 .show {
-  @include tablet {
-    animation: opacity-up $animation-speed *.8 $animation-delay;
-  }
-  }
+	@include tablet {
+		animation: opacity-up $animation-speed *.8 $animation-delay;
+	}
+}

@@ -1,72 +1,72 @@
 
 @keyframes opacity-up {
-    0% {
-      opacity: 0;
-    }
-    10% {
-      pointer-events: all;
-    }
-    50% {
-      opacity: 1;
-    }
-    90% {
-      pointer-events: none;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
+	0% {
+		opacity: 0;
+	}
+	10% {
+		pointer-events: all;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		pointer-events: none;
+	}
+	100% {
+		opacity: 0;
+	}
+}
 
-  @keyframes show {
-    0% {
-      display: none;
-    }
-    1% {
-      display: block;
-    }
-    99% {
-      display: block;
-    }
-    100% {
-      display: none;
-    }
-  }
+@keyframes show {
+	0% {
+		display: none;
+	}
+	1% {
+		display: block;
+	}
+	99% {
+		display: block;
+	}
+	100% {
+		display: none;
+	}
+}
   
-  @keyframes hide {
-    from {
-      opacity: 1;
-    }
-    to {
-      opacity: 0;
-    }
-  }
+@keyframes hide {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
   
-  @mixin animation($name, $toX, $toY, $toZ, $transitonValue) {
-    @keyframes #{$name} {
-      0% {
-        transform: $starting-rotation;
-      }
-      10% { // .5s
-        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
-        .front {
-          display: none;
-        }
-      }
-      20% {
-        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}) #{$transitonValue};
-      }
-      80% {
-        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ})#{$transitonValue}; 
-      }
-      90% { 
-        transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
-      }
-      100% {
-        transform: $starting-rotation;
-      }
-    }
-  }
+@mixin animation($name, $toX, $toY, $toZ, $transitonValue) {
+	@keyframes #{$name} {
+		0% {
+			transform: $starting-rotation;
+		}
+		10% { // .5s
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
+			.front {
+				display: none;
+			}
+		}
+		20% {
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}) #{$transitonValue};
+		}
+		80% {
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ})#{$transitonValue}; 
+		}
+		90% { 
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
+		}
+		100% {
+			transform: $starting-rotation;
+		}
+	}
+}
 
- @include animation('rotate-a', 0, 90deg, 0, translateZ(($architectureWidth - $height) / -2) );
- @include animation('rotate-h', 0, 0, 0, translateX(($hetzelWidth - $height) / -2));
- @include animation('rotate-e', -90deg, 0, 0, translateX(($entertainmentWidth - $height) / -2));
+@include animation('rotate-a', 0, 90deg, 0, translateZ(($architectureWidth - $height) / -2) );
+@include animation('rotate-h', 0, 0, 0, translateX(($hetzelWidth - $height) / -2));
+@include animation('rotate-e', -90deg, 0, 0, translateX(($entertainmentWidth - $height) / -2));

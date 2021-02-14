@@ -1,27 +1,27 @@
 .perspectives {
-    display: none;
-    transform: scale(0.7);
-    top: 200px;
-    right: 630px;
-    // z-index: -1;
-    position: absolute;
-    left: 49%;
-    opacity: .5;
-    .perspective {
-        height: 135px;
-        position: absolute;
-        &-a {
-        // right: 10px;
-            height: 200px;
-            left: -40px;
-        }
-        &-h {
-            height: 200px;
-            left: 76px;
-        }
-        &-e {
-            top: -68px;
-            left: -40px;
-        }
-    }
+	display: none;
+	transform: scale(.7);
+	top: 200px;
+	right: 630px;
+	// z-index: -1;
+	position: absolute;
+	left: 49%;
+	opacity: .5;
+	.perspective {
+		height: 135px;
+		position: absolute;
+		&-a {
+			// right: 10px;
+			height: 200px;
+			left: -40px;
+		}
+		&-h {
+			height: 200px;
+			left: 76px;
+		}
+		&-e {
+			top: -68px;
+			left: -40px;
+		}
+	}
 }
