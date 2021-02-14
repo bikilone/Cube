@@ -23,6 +23,6 @@
   }
   
   .bottom{
-    transform: translateY(-$height / 2) rotateX(90deg);
+    transform: translateY(-$height / 2) rotateX(90deg) rotateZ(90deg);
     background-image: url('../assets/perspektiva\ E\ ispravljena.png');
   }
