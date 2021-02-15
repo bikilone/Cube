@@ -6,6 +6,12 @@ $starting-rotation: rotateX(-37deg) rotateY(43deg) rotateZ(-2deg);
 // $starting-rotation: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translateX(-50px);
 $animation-speed: 5s;
 $animation-delay: $animation-speed / 5;
+$e-front:'../assets/front-pozicija/E.png';
+$e-perspective: '../assets/perspektiva\ E\ ispravljena.png';
+$h-front:'../assets/front-pozicija/H.png';
+$h-perspective: '../assets/perspektiva\ H\ ispravljena.png';
+$a-front:'../assets/front-pozicija/A.png';
+$a-perspective: '../assets/perspektiva\ A\ ispravljena.png';
 @mixin mobile {
     @media (min-width: 320px) { @content; }
 }

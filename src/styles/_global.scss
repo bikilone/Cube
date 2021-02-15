@@ -1,4 +1,4 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -8,7 +8,13 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100vh;
-	background: lightgray;
 	line-height: 1;
 	overflow: hidden;
+	background-color: rgb(241, 237, 237);
 } 
+
+.test {
+	height: 100px;
+	width: 1000px;
+	background-color: red;
+}

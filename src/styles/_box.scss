@@ -22,31 +22,58 @@
 	background-size: cover;
 	position: absolute;
 	background-color: grey;
+	a {
+		display: inline-block;
+		height: 100%;
+		width: 100%;
+		pointer-events: none;
+		cursor: default;
+	}
+}
+
+body::after {
+	position:absolute; 
+	width:0;
+	height:0;
+	overflow:hidden;
+	z-index:-1; // hide images
+	content:url($a-front) url($h-front) url($e-front); // load images
 }
   
 .rotate-a {
 	@include tablet {
 		animation: rotate-a $animation-speed;
-		.left {
-			background-image: url('../assets/front-pozicija/A.png');
+		.a-side {
+			background-image: url($a-front);
 		}
 	}
-   
+	.a-side a {
+		pointer-events: initial;
+		cursor: pointer;
+	}
 }
 .rotate-h {
 	@include tablet {
 		animation: rotate-h $animation-speed;
-		.front {
-			background-image: url('../assets/front-pozicija/H.png');
+		.h-side {
+			background-image: url($h-front);
 		}
+	}
+	.h-side a {
+		pointer-events: initial;
+		cursor: pointer;
 	}
 }
 .rotate-e {
 	@include tablet {
 		animation: rotate-e $animation-speed;
-		.bottom {
-			background-image: url('../assets/front-pozicija/E.png');
+		.e-side {
+			background-image: url($e-front);
 		}
+	}
+	.e-side a {
+		pointer-events: initial;
+		cursor: pointer;
 	}
 }
 

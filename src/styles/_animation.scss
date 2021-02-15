@@ -46,11 +46,8 @@
 		0% {
 			transform: $starting-rotation;
 		}
-		10% { // .5s
+		10% {
 			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
-			.front {
-				display: none;
-			}
 		}
 		20% {
 			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});
@@ -67,6 +64,23 @@
 	}
 }
 
+@mixin backgroundAnimation($name, $url1, $url2) {
+	@keyframes #{$name} {
+		1% {
+			background-image: url($url1); 
+		}
+		99% { 
+			background-image: url($url2); 
+		}
+	}
+}
+
 @include animation('rotate-a', 0, 90deg, 0);
 @include animation('rotate-h', 0, 0, 0);
 @include animation('rotate-e', -90deg, 90deg, 0);
+
+@include backgroundAnimation('a-background', $a-perspective, $a-front);
+@include backgroundAnimation('h-background', $h-perspective, $h-front);
+@include backgroundAnimation('e-background', $e-perspective, $e-front);
+
+

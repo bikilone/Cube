@@ -1,14 +1,16 @@
-.front{
+.h-side{
 	transform: translateZ($height / 2);
-	background-image: url('../assets//perspektiva\ H\ ispravljena.png')
+	background-image: url($h-perspective);
+	transition: background-image .5s ease-in-out;
 }
 .back{
 	transform: translateZ(-$height / 2);
 	background-color: rgba(72,99,160,.80);
 } 
-.left{
+.a-side{
 	transform: translateX(-$height / 2) rotateY(90deg);
-	background-image: url('../assets/prespekitva\ A\ ispralvjena.png');
+	background-image: url($a-perspective);
+	transition: background-image .5s ease-in-out;
 }
   
 .right{
@@ -22,7 +24,8 @@
    
 }
   
-.bottom{
+.e-side{
 	transform: translateY(-$height / 2) rotateX(90deg) rotateZ(90deg);
-	background-image: url('../assets/perspektiva\ E\ ispravljena.png');
+	background-image: url($e-perspective);
+	transition: background-image .5s ease-in-out;
 }

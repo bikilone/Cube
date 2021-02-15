@@ -1,40 +1,44 @@
 import "./styles/index.scss";
+import { throttle } from 'throttle-debounce';
 
-var H = document.getElementsByClassName('front')[0];
-var E = document.getElementsByClassName('bottom')[0];
-var A = document.getElementsByClassName('left')[0];
+var hoverTimeout = 1000;
+var animationTime = 5000;
+
+var H = document.getElementsByClassName('h-side')[0];
+var E = document.getElementsByClassName('e-side')[0];
+var A = document.getElementsByClassName('a-side')[0];
+
 var box = document.getElementsByClassName('box')[0];
 var hetzel = document.getElementsByClassName('hetzel')[0];
 var entertainment = document.getElementsByClassName('entertainment')[0];
 var architecture = document.getElementsByClassName('architecture')[0];
-var aImg = document.querySelector('.architecture img');
-var hImg = document.querySelector('.hetzel img');
-var eImg = document.querySelector('.entertainment img');
 var eventRunning = false;
-setTimeout(() => { 
-    architecture.style.width = aImg.offsetWidth + 'px';
-    hetzel.style.width = hImg.offsetWidth + 'px';
-    entertainment.style.width = eImg.offsetWidth + 'px';
-}, 0);
 
-H.addEventListener('mouseover', function() {
-    if(eventRunning) return;
-    eventRunning = true;
-    addClassToBox('rotate-h');
-    handleShowClass(hetzel);
-});
-E.addEventListener('mouseover', function() {
-    if(eventRunning) return;
-    eventRunning = true;
-    addClassToBox('rotate-e');
-    handleShowClass(entertainment);
-});
-A.addEventListener('mouseover', function() {
-    if(eventRunning) return;
-    eventRunning = true;
-    addClassToBox('rotate-a');
-    handleShowClass(architecture);
-});
+box.addEventListener('mousemove', throttle(hoverTimeout, function(e) {
+    var id = e.target.id;
+    var className;
+    switch(id) {
+        case 'h':
+            className = 'rotate-h';
+            break;
+        case 'e':
+            className = 'rotate-e';
+            break;
+        case 'a':
+                className = 'rotate-a';
+                break;
+    }
+    if(!className)
+        return;
+    handleMouseOver(className)
+}, false));
+
+
+function handleMouseOver(classToAdd) {
+        if (eventRunning) return;
+        eventRunning = true;
+        addClassToBox(classToAdd);     
+}
 
 function addClassToBox(classNotToRemove) {
     box.classList.remove('rotate-e', 'rotate-a', 'rotate-h');
@@ -42,7 +46,7 @@ function addClassToBox(classNotToRemove) {
     setTimeout(() => {
         box.classList.remove(classNotToRemove);
         eventRunning = false;
-    }, 5000);
+    }, animationTime);
 }
 
 function handleShowClass(textToShow) {
@@ -52,7 +56,7 @@ function handleShowClass(textToShow) {
             text.classList.add('show');
             setTimeout(() => {
                 text.classList.remove('show');
-            }, 4000);
+            }, animationTime * 0.8);
         } else {
             text.classList.remove('show');
         }
