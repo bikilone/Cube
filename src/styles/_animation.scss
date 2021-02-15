@@ -13,7 +13,7 @@
 		pointer-events: none;
 	}
 	100% {
-		opacity: 0;
+		// opacity: 0;
 	}
 }
 
@@ -41,7 +41,7 @@
 	}
 }
   
-@mixin animation($name, $toX, $toY, $toZ, $transitonValue) {
+@mixin animation($name, $toX, $toY, $toZ) {
 	@keyframes #{$name} {
 		0% {
 			transform: $starting-rotation;
@@ -53,10 +53,10 @@
 			}
 		}
 		20% {
-			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}) #{$transitonValue};
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});
 		}
 		80% {
-			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ})#{$transitonValue}; 
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
 		}
 		90% { 
 			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
@@ -67,6 +67,6 @@
 	}
 }
 
-@include animation('rotate-a', 0, 90deg, 0, translateZ(($architectureWidth - $height) / -2) );
-@include animation('rotate-h', 0, 0, 0, translateX(($hetzelWidth - $height) / -2));
-@include animation('rotate-e', -90deg, 0, 0, translateX(($entertainmentWidth - $height) / -2));
+@include animation('rotate-a', 0, 90deg, 0);
+@include animation('rotate-h', 0, 0, 0);
+@include animation('rotate-e', -90deg, 90deg, 0);

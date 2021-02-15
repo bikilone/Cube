@@ -16,10 +16,6 @@ setTimeout(() => {
     hetzel.style.width = hImg.offsetWidth + 'px';
     entertainment.style.width = eImg.offsetWidth + 'px';
 }, 0);
-// var perspective = document.getElementsByClassName('perspectives')[0];
-// var pA = document.getElementsByClassName('perspective-a')[0];
-// var pH = document.getElementsByClassName('perspective-h')[0];
-// var pE = document.getElementsByClassName('perspective-e')[0];
 
 H.addEventListener('mouseover', function() {
     if(eventRunning) return;
