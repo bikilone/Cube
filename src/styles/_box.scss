@@ -41,7 +41,9 @@ body::after {
 	@include tablet {
 		animation: rotate-a $animation-speed;
 		.a-side {
-			background-image: url($a-front);
+			// background-image: url($a-front);
+			animation: a-background $animation-speed;
+			transition: all 2s;
 		}
 	}
 	.a-side a {

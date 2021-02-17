@@ -14,17 +14,17 @@
 	}
 	&.show-hetzel {
 		.hetzel {
-			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+			animation: fadeInFromNone $animation-speed;
 		}
 	}
 	&.show-entertainment {
 		.entertainment {
-			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+			animation: fadeInFromNone $animation-speed;
 		}
 	}
 	&.show-architecture {
 		.architecture {
-			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+			animation: fadeInFromNone $animation-speed;
 		}
 	}
 	
