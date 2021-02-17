@@ -40,6 +40,27 @@
 		opacity: 0;
 	}
 }
+
+@keyframes fadeInFromNone {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+
+	1% {
+		display: block;
+		opacity: 0;
+	}
+
+	50% {
+		display: block;
+		opacity: 1;
+	}
+	100% {
+		display: none;
+		opacity: 0;
+	}
+}
   
 @mixin animation($name, $toX, $toY, $toZ) {
 	@keyframes #{$name} {

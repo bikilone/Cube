@@ -14,30 +14,37 @@ var entertainment = document.getElementsByClassName('entertainment')[0];
 var architecture = document.getElementsByClassName('architecture')[0];
 var eventRunning = false;
 
+
+var text = document.getElementsByClassName('text')[0];
 box.addEventListener('mousemove', throttle(hoverTimeout, function(e) {
     var id = e.target.id;
-    var className;
+    var classNameBox;
+    var classNameText;
     switch(id) {
         case 'h':
-            className = 'rotate-h';
+            classNameBox = 'rotate-h';
+            classNameText = 'show-hetzel';
             break;
         case 'e':
-            className = 'rotate-e';
+            classNameBox = 'rotate-e';
+            classNameText = 'show-entertainment';
             break;
         case 'a':
-                className = 'rotate-a';
-                break;
+            classNameBox = 'rotate-a';
+            classNameText = 'show-architecture';
+            break;
     }
-    if(!className)
+    if(!classNameBox)
         return;
-    handleMouseOver(className)
+    handleMouseOver(classNameBox, classNameText);
 }, false));
 
 
-function handleMouseOver(classToAdd) {
+function handleMouseOver(classToAdd, classToAddText) {
         if (eventRunning) return;
         eventRunning = true;
         addClassToBox(classToAdd);     
+        addClassToText(classToAddText);
 }
 
 function addClassToBox(classNotToRemove) {
@@ -45,6 +52,15 @@ function addClassToBox(classNotToRemove) {
     box.classList.add(classNotToRemove);
     setTimeout(() => {
         box.classList.remove(classNotToRemove);
+        eventRunning = false;
+    }, animationTime);
+}
+
+function addClassToText(classNotToRemove) {
+    text.classList.remove('show-entertainment', 'show-architecture', 'show-hetzel');
+    text.classList.add(classNotToRemove);
+    setTimeout(() => {
+        text.classList.remove(classNotToRemove);
         eventRunning = false;
     }, animationTime);
 }

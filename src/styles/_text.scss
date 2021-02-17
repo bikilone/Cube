@@ -1,0 +1,31 @@
+.text {
+	margin-top: 420px;
+	.architecture, .entertainment, .hetzel {
+		height: $height;
+		width: 100%;
+		text-align: center;
+		position: absolute;
+		opacity: 0;
+		img {
+			height: $height;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+	&.show-hetzel {
+		.hetzel {
+			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+		}
+	}
+	&.show-entertainment {
+		.entertainment {
+			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+		}
+	}
+	&.show-architecture {
+		.architecture {
+			animation: fadeInFromNone $animation-speed *.8 $animation-delay;
+		}
+	}
+	
+}

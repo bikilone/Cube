@@ -1,9 +1,4 @@
 
-.container {
-	margin-top: 100px;
-	margin-left: calc((100vw - #{$height}) / 2);
-}
-
 .box, .box div {
 	height: $height;
 	width: $height;
@@ -15,6 +10,8 @@
 	transform-style: preserve-3d;
 	font-size: 30px;
 	transform: $starting-rotation;
+	left: calc((100% -  #{$height}) / 2);
+	top: 200px;
 }
   
 .box div {
@@ -74,25 +71,6 @@ body::after {
 	.e-side a {
 		pointer-events: initial;
 		cursor: pointer;
-	}
-}
-
-.links {
-	display: none;
-}
-.architecture, .entertainment, .hetzel {
-	display: inline-block;
-	height: $height;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	opacity: 0;
-	pointer-events: none;
-	img {
-		position: absolute;
-		height: $height;
-		background-repeat: no-repeat;
-		background-size: cover;
 	}
 }
 
