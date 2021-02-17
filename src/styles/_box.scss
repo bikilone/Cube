@@ -41,9 +41,7 @@ body::after {
 	@include tablet {
 		animation: rotate-a $animation-speed;
 		.a-side {
-			// background-image: url($a-front);
 			animation: a-background $animation-speed;
-			transition: all 2s;
 		}
 	}
 	.a-side a {
@@ -55,7 +53,7 @@ body::after {
 	@include tablet {
 		animation: rotate-h $animation-speed;
 		.h-side {
-			background-image: url($h-front);
+			animation: h-background $animation-speed;
 		}
 	}
 	.h-side a {
@@ -67,7 +65,7 @@ body::after {
 	@include tablet {
 		animation: rotate-e $animation-speed;
 		.e-side {
-			background-image: url($e-front);
+			animation: e-background $animation-speed;
 		}
 	}
 	.e-side a {

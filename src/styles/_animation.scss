@@ -72,10 +72,10 @@
 			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});  
 		}
 		20% {
-			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});
+			// transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ});
 		}
 		80% {
-			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
+			// transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
 		}
 		90% { 
 			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
@@ -94,7 +94,7 @@
 		10% {
 			background-image: url($url2); 
 		}
-		99% {
+		90% {
 			background-image: url($url2); 
 		}
 		100% { 
