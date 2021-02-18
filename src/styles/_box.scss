@@ -2,6 +2,10 @@
 .box, .box div {
 	height: $height;
 	width: $height;
+	@include tablet {
+		height: $height-tablet;
+		width: $height-tablet;
+	}
 }
   
 .box {
@@ -12,6 +16,9 @@
 	transform: $starting-rotation;
 	left: calc((100% -  #{$height}) / 2);
 	top: 200px;
+	@include tablet {
+		left: calc((100% -  #{$height-tablet}) / 2);
+	}
 }
   
 .box div {
@@ -38,36 +45,37 @@ body::after {
 }
   
 .rotate-a {
-	@include tablet {
-		animation: rotate-a $animation-speed;
-		.a-side {
-			animation: a-background $animation-speed;
-		}
+	
+	// @include tablet {
+	animation: rotate-a $animation-speed;
+	.a-side {
+		animation: a-background $animation-speed;
 	}
+	// }
 	.a-side a {
 		pointer-events: initial;
 		cursor: pointer;
 	}
 }
 .rotate-h {
-	@include tablet {
-		animation: rotate-h $animation-speed;
-		.h-side {
-			animation: h-background $animation-speed;
-		}
+	// @include tablet {
+	animation: rotate-h $animation-speed;
+	.h-side {
+		animation: h-background $animation-speed;
 	}
+	// }
 	.h-side a {
 		pointer-events: initial;
 		cursor: pointer;
 	}
 }
 .rotate-e {
-	@include tablet {
-		animation: rotate-e $animation-speed;
-		.e-side {
-			animation: e-background $animation-speed;
-		}
+	// @include tablet {
+	animation: rotate-e $animation-speed;
+	.e-side {
+		animation: e-background $animation-speed;
 	}
+	// }
 	.e-side a {
 		pointer-events: initial;
 		cursor: pointer;
@@ -75,7 +83,7 @@ body::after {
 }
 
 .show {
-	@include tablet {
-		animation: opacity-up $animation-speed *.8 $animation-delay;
-	}
+	// @include tablet {
+	animation: opacity-up $animation-speed *.8 $animation-delay;
+	// }
 }

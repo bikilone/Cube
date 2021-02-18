@@ -1,31 +1,48 @@
-.h-side{
+.h-side {
 	transform: translateZ($height / 2);
 	background-image: url($h-perspective);
 	transition: background-image .5s ease-in-out;
+	@include tablet {
+		transform: translateZ($height-tablet / 2);
+	}
 }
-.back{
+.back {
 	transform: translateZ(-$height / 2);
 	background-color: rgba(72,99,160,.80);
+	@include tablet {
+		transform: translateZ(-$height-tablet / 2);
+	}
 } 
-.a-side{
+.a-side {
 	transform: translateX(-$height / 2) rotateY(90deg);
 	background-image: url($a-perspective);
 	transition: background-image .5s ease-in-out;
+	@include tablet {
+		transform: translateX(-$height-tablet / 2) rotateY(90deg);
+	}
 }
   
-.right{
+.right {
 	transform: translateX($height / 2) rotateY(90deg);
 	background: rgba(242,192,99,.80);
+	@include tablet {
+		transform: translateX($height-tablet / 2) rotateY(90deg);
+	}
 }
   
-.top{
+.top {
 	transform: translateY($height / 2) rotateX(90deg);
 	background: rgba(63,140,123,.80);
-   
+	@include tablet {
+		transform: translateY($height-tablet / 2) rotateX(90deg);
+	}
 }
   
-.e-side{
+.e-side {
 	transform: translateY(-$height / 2) rotateX(90deg) rotateZ(90deg);
 	background-image: url($e-perspective);
 	transition: background-image .5s ease-in-out;
+	@include tablet {
+		transform: translateY(-$height-tablet / 2) rotateX(90deg) rotateZ(90deg);
+	}
 }

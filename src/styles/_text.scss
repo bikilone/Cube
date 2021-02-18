@@ -1,15 +1,24 @@
 .text {
-	margin-top: 420px;
+	margin-top: 300px;
+	@include tablet {
+		margin-top: 420px;
+	}
 	.architecture, .entertainment, .hetzel {
 		height: $height;
 		width: 100%;
 		text-align: center;
 		position: absolute;
 		opacity: 0;
+		@include tablet {
+			height: $height-tablet;
+		}
 		img {
 			height: $height;
 			background-repeat: no-repeat;
 			background-size: cover;
+			@include tablet {
+				height: $height-tablet;
+			}
 		}
 	}
 	&.show-hetzel {
