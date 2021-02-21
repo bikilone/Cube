@@ -16,3 +16,26 @@ body {
 	overflow: hidden;
 	background-color: grey;
 } 
+
+.preload * {
+	transition: none !important;
+}
+
+.container {
+	@include tablet {
+		margin-right: 75px;
+		margin-left: 75px;
+	}
+	@include laptop {
+		margin-right: 190px;
+		margin-left: 190px;
+	}
+	@include desktop {
+		margin-right: 300px;
+		margin-left: 300px;
+	}
+	@include desktop-lg {
+		margin-right: 600px;
+		margin-left: 600px;
+	}
+}

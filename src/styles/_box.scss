@@ -1,12 +1,65 @@
 
 .box, .box div {
-	height: $height;
-	width: $height;
-	@include tablet {
-		height: $height-tablet;
-		width: $height-tablet;
+	height: $height-tablet;
+	width: $height-tablet;
+	transition: all $animation-speed;
+}
+  
+@mixin createClass($name, $side, $forwards, $toX, $toY, $toZ) {
+	.#{$name} {
+		.box {
+			transform: rotateX(#{$toX}) rotateY(#{$toY}) rotateZ(#{$toZ}); 
+			
+			.#{$side}  {
+				@if $forwards {
+					&::before {
+						opacity: 0;
+					}
+					&::after {
+						opacity: 1;
+					}
+			
+				} @else {
+					&::before {
+						opacity: 1;
+					}
+					&::after {
+						opacity: 0;
+					}
+				}
+				a {
+					pointer-events: all;
+					cursor: pointer;
+					z-index: 1;
+				}
+			}
+		}
+		.text {
+			@if($name == $rotate-f-h) {
+				.hetzel {
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+			@if ($name == $rotate-f-e) { 
+				.entertainment {
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+			@if ($name == $rotate-f-a)  {
+				.architecture {
+					opacity: 1;
+					z-index: 1;
+				}
+			}
+		}
 	}
 }
+
+@include createClass($rotate-f-a , a-side, true, 0, 90deg, 0 );
+@include createClass($rotate-f-h , h-side, true , 0, 0, 0);
+@include createClass($rotate-f-e , e-side, true, -90deg, 90deg, 0 );
   
 .box {
 	position: absolute;
@@ -14,19 +67,29 @@
 	transform-style: preserve-3d;
 	font-size: 30px;
 	transform: $starting-rotation;
-	left: calc((100% -  #{$height}) / 2);
 	top: 200px;
-	@include tablet {
-		left: calc((100% -  #{$height-tablet}) / 2);
-	}
+	left: calc((100% -  #{$height-tablet}) / 2);
 }
   
 .box div {
-	background-repeat: no-repeat;
-	background-size: cover;
 	position: absolute;
-	background-color: grey;
+	background-color: transparent;
+	&::before, &::after {
+		content: "";
+		position: absolute;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: opacity $animation-speed;
+	}
+	&::after {
+		opacity: 0;
+	}
 	a {
+		position: relative;
 		display: inline-block;
 		height: 100%;
 		width: 100%;
@@ -37,53 +100,9 @@
 
 body::after {
 	position:absolute; 
-	width:0;
+	width:0; 
 	height:0;
 	overflow:hidden;
 	z-index:-1; // hide images
 	content:url($a-front) url($h-front) url($e-front); // load images
-}
-  
-.rotate-a {
-	
-	// @include tablet {
-	animation: rotate-a $animation-speed;
-	.a-side {
-		animation: a-background $animation-speed;
-	}
-	// }
-	.a-side a {
-		pointer-events: initial;
-		cursor: pointer;
-	}
-}
-.rotate-h {
-	// @include tablet {
-	animation: rotate-h $animation-speed;
-	.h-side {
-		animation: h-background $animation-speed;
-	}
-	// }
-	.h-side a {
-		pointer-events: initial;
-		cursor: pointer;
-	}
-}
-.rotate-e {
-	// @include tablet {
-	animation: rotate-e $animation-speed;
-	.e-side {
-		animation: e-background $animation-speed;
-	}
-	// }
-	.e-side a {
-		pointer-events: initial;
-		cursor: pointer;
-	}
-}
-
-.show {
-	// @include tablet {
-	animation: opacity-up $animation-speed *.8 $animation-delay;
-	// }
 }
