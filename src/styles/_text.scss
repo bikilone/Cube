@@ -1,6 +1,9 @@
 .text {
-	margin-top: 300px;
+	margin-top: 360px;
+	height: $height;
+	position: relative;
 	@include tablet {
+		height: $height-tablet;
 		margin-top: 420px;
 	}
 	.architecture, .entertainment, .hetzel {
@@ -9,6 +12,7 @@
 		text-align: center;
 		position: absolute;
 		opacity: 0;
+		transition: opacity $animation-speed;
 		@include tablet {
 			height: $height-tablet;
 		}
@@ -21,20 +25,4 @@
 			}
 		}
 	}
-	&.show-hetzel {
-		.hetzel {
-			animation: fadeInFromNone $animation-speed;
-		}
-	}
-	&.show-entertainment {
-		.entertainment {
-			animation: fadeInFromNone $animation-speed;
-		}
-	}
-	&.show-architecture {
-		.architecture {
-			animation: fadeInFromNone $animation-speed;
-		}
-	}
-	
 }

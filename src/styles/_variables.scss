@@ -1,14 +1,16 @@
 $height: 60px;
 $height-tablet: 120px;
 $starting-rotation: rotateX(-37deg) rotateY(43deg) rotateZ(-2deg);
-$animation-speed: 5s;
-$animation-delay: $animation-speed / 10;
+$animation-speed: 1s;
 $e-front:'../assets/front-pozicija/E.png';
 $e-perspective: '../assets/perspektiva\ E\ ispravljena.png';
 $h-front:'../assets/front-pozicija/H.png';
 $h-perspective: '../assets/perspektiva\ H\ ispravljena.png';
 $a-front:'../assets/front-pozicija/A.png';
 $a-perspective: '../assets/perspektiva\ A\ ispravljena.png';
+$rotate-f-a: 'rotate-f-a';
+$rotate-f-h: 'rotate-f-h';
+$rotate-f-e: 'rotate-f-e';
 @mixin mobile {
     @media (min-width: 320px) { @content; }
 }
