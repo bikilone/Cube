@@ -1,0 +1,28 @@
+nav {
+	height: 52px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	ul, li {
+		display: inline-block;
+	}
+	.about-us {
+		margin-right: 25px;
+	}
+	img {
+		height: 12.3px;
+		margin-left: 20px;
+	}
+	.nav-list {
+		float: right;
+		margin-right: 20px;
+		&-architecture, &-entertainment {
+			display: none;
+		}
+		a {
+			font-size: 14px;
+			line-height: 1;
+		}
+	
+	}
+
+}

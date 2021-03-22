@@ -11,6 +11,11 @@ $a-perspective: '../assets/perspektiva\ A\ ispravljena.png';
 $rotate-f-a: 'rotate-f-a';
 $rotate-f-h: 'rotate-f-h';
 $rotate-f-e: 'rotate-f-e';
+
+// colors
+$gray-border: #BBBBBB;
+$gray-background: #707070;
+
 @mixin mobile {
     @media (min-width: 320px) { @content; }
 }

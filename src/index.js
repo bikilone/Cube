@@ -9,7 +9,7 @@ var container = document.getElementsByClassName('container')[0];
 
 window.addEventListener('load', function() {
     body.classList.remove('preload');
-    init();
+    init(); 
 })
 
 function init() {
