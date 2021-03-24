@@ -1,5 +1,5 @@
 $height: 60px;
-$height-tablet: 120px;
+$height-tablet: 140px;
 $starting-rotation: rotateX(-37deg) rotateY(43deg) rotateZ(-2deg);
 $animation-speed: 1s;
 $e-front:'../assets/front-pozicija/E.png';
@@ -15,6 +15,7 @@ $rotate-f-e: 'rotate-f-e';
 // colors
 $gray-border: #BBBBBB;
 $gray-background: #707070;
+$black: #333333;
 
 @mixin mobile {
     @media (min-width: 320px) { @content; }
