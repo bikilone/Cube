@@ -1,5 +1,5 @@
 
-export var hoverTimeout = 300;
+export var hoverTimeout = 150;
 export var automaticTimeout = 3000;
 
 export var animations = {

@@ -5,8 +5,7 @@ import { hoverTimeout, automaticTimeout, animations} from './constants';
 var eventRunning = false;
 var eventId = -1;
 var body = document.getElementsByTagName('body')[0];
-var container = document.getElementsByClassName('container')[0];
-
+var container = document.getElementsByClassName('mouse-container')[0];
 window.addEventListener('load', function() {
     body.classList.remove('preload');
     init(); 
@@ -19,10 +18,13 @@ function init() {
         var classNameBox = animations[id].forwards;
         handleMouseOver(false, classNameBox);
         setEvent();
+       
         container.addEventListener('mouseleave', function() {
             setTimeout(() => {
-                handleMouseOver(true);
-                resetEvent();
+                if(eventRunning) {
+                    handleMouseOver(true);
+                    resetEvent();
+                }
             }, hoverTimeout);
         });
         setTimeout(
@@ -35,9 +37,12 @@ function init() {
         handleMouseOver(false, classNameBox);
         setEvent();
         container.addEventListener('mouseleave', function() {
+           
             setTimeout(() => {
-                handleMouseOver(true);
-                resetEvent();
+                if(eventRunning) {
+                    handleMouseOver(true);
+                    resetEvent();
+                }
             }, hoverTimeout);
         });
         setTimeout(
