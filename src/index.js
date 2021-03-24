@@ -6,8 +6,6 @@ var eventRunning = false;
 var eventId = -1;
 var body = document.getElementsByTagName('body')[0];
 var container = document.getElementsByClassName('container')[0];
-var architectureText = document.getElementsByClassName('button-architecture')[0]
-var entertainmentText = document.getElementsByClassName('button-entertainment')[0]
 
 window.addEventListener('load', function() {
     body.classList.remove('preload');
@@ -16,6 +14,21 @@ window.addEventListener('load', function() {
 
 function init() {
     body.addEventListener('mousemove', throttle(hoverTimeout, function(e) {
+        var id = e.target.id;
+        if (!id || eventRunning) return;
+        var classNameBox = animations[id].forwards;
+        handleMouseOver(false, classNameBox);
+        setEvent();
+        container.addEventListener('mouseleave', function() {
+            setTimeout(() => {
+                handleMouseOver(true);
+                resetEvent();
+            }, hoverTimeout);
+        });
+        setTimeout(
+            automaticReset, automaticTimeout, eventId);
+    }, false));
+    body.addEventListener('click', throttle(hoverTimeout, function(e) {
         var id = e.target.id;
         if (!id || eventRunning) return;
         var classNameBox = animations[id].forwards;

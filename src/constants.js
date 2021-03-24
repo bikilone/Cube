@@ -1,6 +1,6 @@
 
-export var hoverTimeout = 500;
-export var automaticTimeout = 5000;
+export var hoverTimeout = 300;
+export var automaticTimeout = 3000;
 
 export var animations = {
     a: {
