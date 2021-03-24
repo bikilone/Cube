@@ -24,6 +24,9 @@ body {
 	main {
 		min-height: calc(100% - 52px);
 		position: relative;
+		@include tablet {
+			min-height: calc(100% - 60px);
+		}
 	}
 } 
 

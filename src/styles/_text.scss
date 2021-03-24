@@ -1,5 +1,5 @@
 .text {
-	top: 295px;
+	top: 310px;
 	position: relative;
 	font-size: 30px;
 	color: $black;
@@ -17,5 +17,8 @@
 	@include tablet {
 		top: 360px;
 		font-size: 45px;
+	}
+	@include laptop {
+		top: 495px;
 	}
 }

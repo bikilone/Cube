@@ -72,6 +72,9 @@
 	@include tablet {
 		top: 130px;
 	}
+	@include laptop {
+		top: 255px;
+	}
 }
   
 .box div {
