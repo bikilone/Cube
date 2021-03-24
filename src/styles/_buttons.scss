@@ -12,6 +12,8 @@
 		font-size: 20px;
 		border: 1px solid $gray-border;
 		border-radius: 5px;
+		max-width: 280px;
+		margin: 0 auto;
 		&.button-architecture {
 			margin-bottom: 36px;
 		}
@@ -20,5 +22,8 @@
 			border: none;
 			color: white;
 		}
+	}
+	@include tablet {
+		display: none;
 	}
 }

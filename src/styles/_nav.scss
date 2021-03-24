@@ -2,21 +2,31 @@ nav {
 	height: 52px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	@include tablet {
+		height: 60px;
+	}
 	ul, li {
 		display: inline-block;
 	}
-	.about-us {
+	li {
 		margin-right: 25px;
+		&.contact {
+			margin-right: 0;
+		}
 	}
 	img {
 		height: 12.3px;
-		margin-left: 20px;
+		@include tablet {
+			height: 20px;
+		}
 	}
 	.nav-list {
 		float: right;
-		margin-right: 20px;
 		&-architecture, &-entertainment {
 			display: none;
+			@include tablet {
+				display: inline-block;
+			}
 		}
 		a {
 			font-size: 14px;

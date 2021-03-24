@@ -69,6 +69,9 @@
 	transform: $starting-rotation;
 	top: 100px;
 	left: calc((100% -  #{$height-tablet}) / 2);
+	@include tablet {
+		top: 130px;
+	}
 }
   
 .box div {
