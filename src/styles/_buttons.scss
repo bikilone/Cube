@@ -3,7 +3,7 @@
 	padding-left: 30px;
 	width: 100%;
 	position: absolute;
-	bottom: 125px;
+	top: 460px;
 	button {
 		display: block;
 		width: 100%;
@@ -16,8 +16,10 @@
 		margin: 0 auto;
 		&.button-architecture {
 			margin-bottom: 36px;
+
 		}
-		&.active, &:hover {
+	
+		&:hover {
 			background-color: $gray-background;
 			border: none;
 			color: white;
@@ -26,4 +28,16 @@
 	@include tablet {
 		display: none;
 	}
+}
+
+.rotate-f-e .button-entertainment {
+	background-color: $gray-background;
+	border: none;
+	color: white;
+}
+
+.rotate-f-a .button-architecture {
+	background-color: $gray-background;
+	border: none;
+	color: white;
 }

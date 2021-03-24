@@ -6,6 +6,8 @@ var eventRunning = false;
 var eventId = -1;
 var body = document.getElementsByTagName('body')[0];
 var container = document.getElementsByClassName('container')[0];
+var architectureText = document.getElementsByClassName('button-architecture')[0]
+var entertainmentText = document.getElementsByClassName('button-entertainment')[0]
 
 window.addEventListener('load', function() {
     body.classList.remove('preload');
