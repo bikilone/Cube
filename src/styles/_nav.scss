@@ -10,6 +10,9 @@ nav {
 	}
 	li {
 		margin-right: 25px;
+		@include tablet {
+			margin-right: 38px;
+		}
 		&.contact {
 			margin-right: 0;
 		}

@@ -30,6 +30,7 @@ function init() {
         setTimeout(
             automaticReset, automaticTimeout, eventId);
     }, false));
+    setDate();
 }
 
 function automaticReset(evId) {
@@ -63,4 +64,10 @@ function setEvent() {
 function resetEvent() {
     eventRunning = false;
     eventId = -1;
+}
+
+function setDate(){
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("date").innerHTML = n;
 }
