@@ -12,7 +12,12 @@ window.addEventListener('load', function() {
 })
 
 function init() {
-    body.addEventListener('mousemove', throttle(hoverTimeout, function(e) {
+    body.addEventListener('mousemove', throttle(hoverTimeout, handleEvent, false));
+    body.addEventListener('click', handleEvent);
+    setDate();
+}
+
+function handleEvent(e) {
         var id = e.target.id;
         if (!id || eventRunning) return;
         var classNameBox = animations[id].forwards;
@@ -20,6 +25,7 @@ function init() {
         setEvent();
        
         container.addEventListener('mouseleave', function() {
+            console.log('leave')
             setTimeout(() => {
                 if(eventRunning) {
                     handleMouseOver(true);
@@ -29,27 +35,7 @@ function init() {
         });
         setTimeout(
             automaticReset, automaticTimeout, eventId);
-    }, false));
-    body.addEventListener('click', throttle(hoverTimeout, function(e) {
-        var id = e.target.id;
-        if (!id || eventRunning) return;
-        var classNameBox = animations[id].forwards;
-        handleMouseOver(false, classNameBox);
-        setEvent();
-        container.addEventListener('mouseleave', function() {
-           
-            setTimeout(() => {
-                if(eventRunning) {
-                    handleMouseOver(true);
-                    resetEvent();
-                }
-            }, hoverTimeout);
-        });
-        setTimeout(
-            automaticReset, automaticTimeout, eventId);
-    }, false));
-    setDate();
-}
+    }
 
 function automaticReset(evId) {
     // reset event only if there is one

@@ -23,9 +23,15 @@ body {
 	}
 	main {
 		min-height: calc(100% - 52px);
+		@media (orientation: landscape) {
+			min-height: calc(100%);
+		}
 		position: relative;
 		@include tablet {
-			min-height: calc(100% - 60px);
+			min-height: calc(100% - 62px);
+			@media (orientation: landscape) {
+				min-height: calc(140%);
+			}
 		}
 		.mouse-container {
 			height: 85%;
@@ -34,15 +40,16 @@ body {
 			transform: translateX(-50%);
 			left: 50%;
 			z-index: 1;
+			// background-color: red;
 			@include laptop {
 				width: 76%;
 				height: 70%;
-				top: 75px;
+				// top: 75px;
 			}
 			@include desktop {
-				width: 50%;
-				height: 50%;
-				top: 120px;
+				width: 70%;
+				height: 70%;
+				// top: 120px;
 			}
 		}
 	}
