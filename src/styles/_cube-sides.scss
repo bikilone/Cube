@@ -11,7 +11,7 @@
 }
 @include cubeSide('h-side', $h-perspective, $h-front,  translateZ($height-tablet / 2));
 @include cubeSide('e-side', $e-perspective, $e-front,  translateY(-$height-tablet / 2) rotateX(90deg) rotateZ(90deg));
-@include cubeSide('a-side', $a-perspective, $a-front,  translateX(-$height-tablet / 2) rotateY(90deg));
+@include cubeSide('a-side', $a-perspective, $a-front,  translateX(-$height-tablet / 2) rotateY(270deg));
 .back {
 	transform: translateZ(-$height-tablet / 2);
 } 
