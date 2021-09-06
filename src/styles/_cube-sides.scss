@@ -21,4 +21,8 @@
 .top {
 	transform: translateY($height-tablet / 2) rotateX(90deg);
 }
+
+.e-side::before {
+	transform: scaleX(1.03); // add to correct image distortion
+}
   
