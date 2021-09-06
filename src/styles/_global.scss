@@ -30,7 +30,7 @@ body {
 		@include tablet {
 			min-height: calc(100% - 62px);
 			@media (orientation: landscape) {
-				min-height: calc(93%);
+				min-height: calc(140%);
 			}
 		}
 		.mouse-container {
