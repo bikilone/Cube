@@ -1,7 +1,11 @@
 
 .box, .box div {
-	height: $height-tablet;
-	width: $height-tablet;
+	height: $height;
+	width: $height;
+	@include tablet {
+		height: $height-tablet;
+		width: $height-tablet;
+	}
 	transition: all $animation-speed;
 }
   
@@ -68,10 +72,11 @@
 	font-size: 30px;
 	transform: $starting-rotation;
 	top: 100px;
-	left: calc((100% -  #{$height-tablet}) / 2);
+	left: calc((100% -  #{$height}) / 2);
 	z-index: 2;
 	@include tablet {
-		top: 130px;
+		top: 180px;
+		left: calc((100% -  #{$height-tablet}) / 2);
 	}
 	@include laptop {
 		top: 255px;

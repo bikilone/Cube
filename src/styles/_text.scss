@@ -17,10 +17,10 @@
 		transition: opacity $animation-speed;
 	}
 	@include tablet {
-		top: 360px;
+		top: 450px;
 		font-size: 45px;
 	}
 	@include laptop {
-		top: 495px;
+		top: 575px;
 	}
 }

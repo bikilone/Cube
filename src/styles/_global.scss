@@ -28,9 +28,12 @@ body {
 		}
 		position: relative;
 		@include tablet {
-			min-height: calc(100% - 62px);
+			// min-height: calc(100% - 62px);
 			@media (orientation: landscape) {
 				min-height: calc(140%);
+			}
+			@media (orientation: portrait) {
+				min-height: calc(100% - 62px);
 			}
 		}
 		.mouse-container {
